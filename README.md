@@ -1,5 +1,5 @@
 # KroguSoft-DigiWorks
-damonarthurbell@gmail.com
-joeyelizabethwarmerdam@gmail.com
-benjamin.isaiah.lopez@gmail.com
-nomadkrad1@gmail.com
+Damon(Arthur) Bell: damonarthurbell@gmail.com
+Joey Warmerdam: joeyelizabethwarmerdam@gmail.com
+Ben Lopez: benjamin.isaiah.lopez@gmail.com
+Rhonen Williams: nomadkrad1@gmail.com
