@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: e1a1a8f7587d1bf43b50206e31a16440
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Armature.001
+    100004: Armature.002
+    100006: Base
+    100008: Base 1
+    100010: Base 2
+    100012: Chest
+    100014: Chest 1
+    100016: Chest 2
+    100018: Collar.L
+    100020: Collar.L 1
+    100022: Collar.L 2
+    100024: Collar.R.001
+    100026: Collar.R.001 1
+    100028: Collar.R.001 2
+    100030: Cube
+    100032: Cube.001
+    100034: Cylinder
+    100036: Cylinder.000
+    100038: Cylinder.002
+    100040: Cylinder.003
+    100042: Cylinder.004
+    100044: Cylinder.005
+    100046: Cylinder.006
+    100048: Cylinder.008
+    100050: Cylinder.016
+    100052: F1.A.L
+    100054: F1.A.L 1
+    100056: F1.A.L 2
+    100058: F1.A.R.001
+    100060: F1.A.R.001 1
+    100062: F1.A.R.001 2
+    100064: F1.B.L
+    100066: F1.B.L 1
+    100068: F1.B.L 2
+    100070: F1.B.R.001
+    100072: F1.B.R.001 1
+    100074: F1.B.R.001 2
+    100076: F1.C.L
+    100078: F1.C.L 1
+    100080: F1.C.L 2
+    100082: F1.C.L_end
+    100084: F1.C.L_end 1
+    100086: F1.C.L_end 2
+    100088: F1.C.R.001
+    100090: F1.C.R.001 1
+    100092: F1.C.R.001 2
+    100094: F1.C.R.001_end
+    100096: F1.C.R.001_end 1
+    100098: F1.C.R.001_end 2
+    100100: F2.A.L
+    100102: F2.A.L 1
+    100104: F2.A.L 2
+    100106: F2.A.R.001
+    100108: F2.A.R.001 1
+    100110: F2.A.R.001 2
+    100112: F2.B.L
+    100114: F2.B.L 1
+    100116: F2.B.L 2
+    100118: F2.B.R.001
+    100120: F2.B.R.001 1
+    100122: F2.B.R.001 2
+    100124: F2.C.L
+    100126: F2.C.L 1
+    100128: F2.C.L 2
+    100130: F2.C.L_end
+    100132: F2.C.L_end 1
+    100134: F2.C.L_end 2
+    100136: F2.C.R.001
+    100138: F2.C.R.001 1
+    100140: F2.C.R.001 2
+    100142: F2.C.R.001_end
+    100144: F2.C.R.001_end 1
+    100146: F2.C.R.001_end 2
+    100148: F3.A.L
+    100150: F3.A.L 1
+    100152: F3.A.L 2
+    100154: F3.A.R.001
+    100156: F3.A.R.001 1
+    100158: F3.A.R.001 2
+    100160: F3.B.L
+    100162: F3.B.L 1
+    100164: F3.B.L 2
+    100166: F3.B.R.001
+    100168: F3.B.R.001 1
+    100170: F3.B.R.001 2
+    100172: F3.C.L
+    100174: F3.C.L 1
+    100176: F3.C.L 2
+    100178: F3.C.L_end
+    100180: F3.C.L_end 1
+    100182: F3.C.L_end 2
+    100184: F3.C.R.001
+    100186: F3.C.R.001 1
+    100188: F3.C.R.001 2
+    100190: F3.C.R.001_end
+    100192: F3.C.R.001_end 1
+    100194: F3.C.R.001_end 2
+    100196: F4.A.L
+    100198: F4.A.L 1
+    100200: F4.A.L 2
+    100202: F4.A.R.001
+    100204: F4.A.R.001 1
+    100206: F4.A.R.001 2
+    100208: F4.B.L
+    100210: F4.B.L 1
+    100212: F4.B.L 2
+    100214: F4.B.R.001
+    100216: F4.B.R.001 1
+    100218: F4.B.R.001 2
+    100220: F4.C.L
+    100222: F4.C.L 1
+    100224: F4.C.L 2
+    100226: F4.C.L_end
+    100228: F4.C.L_end 1
+    100230: F4.C.L_end 2
+    100232: F4.C.R.001
+    100234: F4.C.R.001 1
+    100236: F4.C.R.001 2
+    100238: F4.C.R.001_end
+    100240: F4.C.R.001_end 1
+    100242: F4.C.R.001_end 2
+    100244: Foot.L
+    100246: Foot.L 1
+    100248: Foot.L 2
+    100250: Foot.R.001
+    100252: Foot.R.001 1
+    100254: Foot.R.001 2
+    100256: golf
+    100258: Hand.L
+    100260: Hand.L 1
+    100262: Hand.L 2
+    100264: Hand.R
+    100266: Hand.R 1
+    100268: Hand.R 2
+    100270: Head
+    100272: Head 1
+    100274: Head 2
+    100276: Head_end
+    100278: Head_end 1
+    100280: Head_end 2
+    100282: IK.Leg.L
+    100284: IK.Leg.L 1
+    100286: IK.Leg.L 2
+    100288: IK.Leg.R
+    100290: IK.Leg.R 1
+    100292: IK.Leg.R 2
+    100294: Knee.L
+    100296: Knee.L 1
+    100298: Knee.L 2
+    100300: Knee.L_end
+    100302: Knee.L_end 1
+    100304: Knee.L_end 2
+    100306: Knee.R
+    100308: Knee.R 1
+    100310: Knee.R 2
+    100312: Knee.R_end
+    100314: Knee.R_end 1
+    100316: Knee.R_end 2
+    100318: LowerArm.L
+    100320: LowerArm.L 1
+    100322: LowerArm.L 2
+    100324: LowerArm.R.002
+    100326: LowerArm.R.002 1
+    100328: LowerArm.R.002 2
+    100330: LowerLeg.L
+    100332: LowerLeg.L 1
+    100334: LowerLeg.L 2
+    100336: LowerLeg.R.001
+    100338: LowerLeg.R.001 1
+    100340: LowerLeg.R.001 2
+    100342: Neck
+    100344: Neck 1
+    100346: Neck 2
+    100348: Pelvis
+    100350: Pelvis 1
+    100352: Pelvis 2
+    100354: //RootNode
+    100356: Root
+    100358: Root 1
+    100360: Root 2
+    100362: Stomach
+    100364: Stomach 1
+    100366: Stomach 2
+    100368: Thigh.L
+    100370: Thigh.L 1
+    100372: Thigh.L 2
+    100374: Thigh.R.001
+    100376: Thigh.R.001 1
+    100378: Thigh.R.001 2
+    100380: Thumb.A.L
+    100382: Thumb.A.L 1
+    100384: Thumb.A.L 2
+    100386: Thumb.A.R.001
+    100388: Thumb.A.R.001 1
+    100390: Thumb.A.R.001 2
+    100392: Thumb.B.L
+    100394: Thumb.B.L 1
+    100396: Thumb.B.L 2
+    100398: Thumb.B.R.001
+    100400: Thumb.B.R.001 1
+    100402: Thumb.B.R.001 2
+    100404: Thumb.C.L
+    100406: Thumb.C.L 1
+    100408: Thumb.C.L 2
+    100410: Thumb.C.L_end
+    100412: Thumb.C.L_end 1
+    100414: Thumb.C.L_end 2
+    100416: Thumb.C.R.001
+    100418: Thumb.C.R.001 1
+    100420: Thumb.C.R.001 2
+    100422: Thumb.C.R.001_end
+    100424: Thumb.C.R.001_end 1
+    100426: Thumb.C.R.001_end 2
+    100428: Toes.L.002
+    100430: Toes.L.002 1
+    100432: Toes.L.002 2
+    100434: Toes.L.003
+    100436: Toes.L.003 1
+    100438: Toes.L.003 2
+    100440: Toes.L.003_end
+    100442: Toes.L.003_end 1
+    100444: Toes.L.003_end 2
+    100446: Toes.L.004
+    100448: Toes.L.004 1
+    100450: Toes.L.004 2
+    100452: Toes.L.005
+    100454: Toes.L.005 1
+    100456: Toes.L.005 2
+    100458: Toes.L.005_end
+    100460: Toes.L.005_end 1
+    100462: Toes.L.005_end 2
+    100464: Toes.L.006
+    100466: Toes.L.006 1
+    100468: Toes.L.006 2
+    100470: Toes.L.007
+    100472: Toes.L.007 1
+    100474: Toes.L.007 2
+    100476: Toes.L.007_end
+    100478: Toes.L.007_end 1
+    100480: Toes.L.007_end 2
+    100482: Toes.L.008
+    100484: Toes.L.008 1
+    100486: Toes.L.008 2
+    100488: Toes.L.009
+    100490: Toes.L.009 1
+    100492: Toes.L.009 2
+    100494: Toes.L.009_end
+    100496: Toes.L.009_end 1
+    100498: Toes.L.009_end 2
+    100500: Toes.L.010
+    100502: Toes.L.010 1
+    100504: Toes.L.010 2
+    100506: Toes.L.011
+    100508: Toes.L.011 1
+    100510: Toes.L.011 2
+    100512: Toes.L.011_end
+    100514: Toes.L.011_end 1
+    100516: Toes.L.011_end 2
+    100518: Toes.R.012
+    100520: Toes.R.012 1
+    100522: Toes.R.012 2
+    100524: Toes.R.013
+    100526: Toes.R.013 1
+    100528: Toes.R.013 2
+    100530: Toes.R.013_end
+    100532: Toes.R.013_end 1
+    100534: Toes.R.013_end 2
+    100536: Toes.R.014
+    100538: Toes.R.014 1
+    100540: Toes.R.014 2
+    100542: Toes.R.015
+    100544: Toes.R.015 1
+    100546: Toes.R.015 2
+    100548: Toes.R.015_end
+    100550: Toes.R.015_end 1
+    100552: Toes.R.015_end 2
+    100554: Toes.R.016
+    100556: Toes.R.016 1
+    100558: Toes.R.016 2
+    100560: Toes.R.017
+    100562: Toes.R.017 1
+    100564: Toes.R.017 2
+    100566: Toes.R.017_end
+    100568: Toes.R.017_end 1
+    100570: Toes.R.017_end 2
+    100572: Toes.R.018
+    100574: Toes.R.018 1
+    100576: Toes.R.018 2
+    100578: Toes.R.019
+    100580: Toes.R.019 1
+    100582: Toes.R.019 2
+    100584: Toes.R.019_end
+    100586: Toes.R.019_end 1
+    100588: Toes.R.019_end 2
+    100590: Toes.R.020
+    100592: Toes.R.020 1
+    100594: Toes.R.020 2
+    100596: Toes.R.021
+    100598: Toes.R.021 1
+    100600: Toes.R.021 2
+    100602: Toes.R.021_end
+    100604: Toes.R.021_end 1
+    100606: Toes.R.021_end 2
+    100608: UpperArm.L
+    100610: UpperArm.L 1
+    100612: UpperArm.L 2
+    100614: UpperArm.R.001
+    100616: UpperArm.R.001 1
+    100618: UpperArm.R.001 2
+    400000: Armature
+    400002: Armature.001
+    400004: Armature.002
+    400006: Base
+    400008: Base 1
+    400010: Base 2
+    400012: Chest
+    400014: Chest 1
+    400016: Chest 2
+    400018: Collar.L
+    400020: Collar.L 1
+    400022: Collar.L 2
+    400024: Collar.R.001
+    400026: Collar.R.001 1
+    400028: Collar.R.001 2
+    400030: Cube
+    400032: Cube.001
+    400034: Cylinder
+    400036: Cylinder.000
+    400038: Cylinder.002
+    400040: Cylinder.003
+    400042: Cylinder.004
+    400044: Cylinder.005
+    400046: Cylinder.006
+    400048: Cylinder.008
+    400050: Cylinder.016
+    400052: F1.A.L
+    400054: F1.A.L 1
+    400056: F1.A.L 2
+    400058: F1.A.R.001
+    400060: F1.A.R.001 1
+    400062: F1.A.R.001 2
+    400064: F1.B.L
+    400066: F1.B.L 1
+    400068: F1.B.L 2
+    400070: F1.B.R.001
+    400072: F1.B.R.001 1
+    400074: F1.B.R.001 2
+    400076: F1.C.L
+    400078: F1.C.L 1
+    400080: F1.C.L 2
+    400082: F1.C.L_end
+    400084: F1.C.L_end 1
+    400086: F1.C.L_end 2
+    400088: F1.C.R.001
+    400090: F1.C.R.001 1
+    400092: F1.C.R.001 2
+    400094: F1.C.R.001_end
+    400096: F1.C.R.001_end 1
+    400098: F1.C.R.001_end 2
+    400100: F2.A.L
+    400102: F2.A.L 1
+    400104: F2.A.L 2
+    400106: F2.A.R.001
+    400108: F2.A.R.001 1
+    400110: F2.A.R.001 2
+    400112: F2.B.L
+    400114: F2.B.L 1
+    400116: F2.B.L 2
+    400118: F2.B.R.001
+    400120: F2.B.R.001 1
+    400122: F2.B.R.001 2
+    400124: F2.C.L
+    400126: F2.C.L 1
+    400128: F2.C.L 2
+    400130: F2.C.L_end
+    400132: F2.C.L_end 1
+    400134: F2.C.L_end 2
+    400136: F2.C.R.001
+    400138: F2.C.R.001 1
+    400140: F2.C.R.001 2
+    400142: F2.C.R.001_end
+    400144: F2.C.R.001_end 1
+    400146: F2.C.R.001_end 2
+    400148: F3.A.L
+    400150: F3.A.L 1
+    400152: F3.A.L 2
+    400154: F3.A.R.001
+    400156: F3.A.R.001 1
+    400158: F3.A.R.001 2
+    400160: F3.B.L
+    400162: F3.B.L 1
+    400164: F3.B.L 2
+    400166: F3.B.R.001
+    400168: F3.B.R.001 1
+    400170: F3.B.R.001 2
+    400172: F3.C.L
+    400174: F3.C.L 1
+    400176: F3.C.L 2
+    400178: F3.C.L_end
+    400180: F3.C.L_end 1
+    400182: F3.C.L_end 2
+    400184: F3.C.R.001
+    400186: F3.C.R.001 1
+    400188: F3.C.R.001 2
+    400190: F3.C.R.001_end
+    400192: F3.C.R.001_end 1
+    400194: F3.C.R.001_end 2
+    400196: F4.A.L
+    400198: F4.A.L 1
+    400200: F4.A.L 2
+    400202: F4.A.R.001
+    400204: F4.A.R.001 1
+    400206: F4.A.R.001 2
+    400208: F4.B.L
+    400210: F4.B.L 1
+    400212: F4.B.L 2
+    400214: F4.B.R.001
+    400216: F4.B.R.001 1
+    400218: F4.B.R.001 2
+    400220: F4.C.L
+    400222: F4.C.L 1
+    400224: F4.C.L 2
+    400226: F4.C.L_end
+    400228: F4.C.L_end 1
+    400230: F4.C.L_end 2
+    400232: F4.C.R.001
+    400234: F4.C.R.001 1
+    400236: F4.C.R.001 2
+    400238: F4.C.R.001_end
+    400240: F4.C.R.001_end 1
+    400242: F4.C.R.001_end 2
+    400244: Foot.L
+    400246: Foot.L 1
+    400248: Foot.L 2
+    400250: Foot.R.001
+    400252: Foot.R.001 1
+    400254: Foot.R.001 2
+    400256: golf
+    400258: Hand.L
+    400260: Hand.L 1
+    400262: Hand.L 2
+    400264: Hand.R
+    400266: Hand.R 1
+    400268: Hand.R 2
+    400270: Head
+    400272: Head 1
+    400274: Head 2
+    400276: Head_end
+    400278: Head_end 1
+    400280: Head_end 2
+    400282: IK.Leg.L
+    400284: IK.Leg.L 1
+    400286: IK.Leg.L 2
+    400288: IK.Leg.R
+    400290: IK.Leg.R 1
+    400292: IK.Leg.R 2
+    400294: Knee.L
+    400296: Knee.L 1
+    400298: Knee.L 2
+    400300: Knee.L_end
+    400302: Knee.L_end 1
+    400304: Knee.L_end 2
+    400306: Knee.R
+    400308: Knee.R 1
+    400310: Knee.R 2
+    400312: Knee.R_end
+    400314: Knee.R_end 1
+    400316: Knee.R_end 2
+    400318: LowerArm.L
+    400320: LowerArm.L 1
+    400322: LowerArm.L 2
+    400324: LowerArm.R.002
+    400326: LowerArm.R.002 1
+    400328: LowerArm.R.002 2
+    400330: LowerLeg.L
+    400332: LowerLeg.L 1
+    400334: LowerLeg.L 2
+    400336: LowerLeg.R.001
+    400338: LowerLeg.R.001 1
+    400340: LowerLeg.R.001 2
+    400342: Neck
+    400344: Neck 1
+    400346: Neck 2
+    400348: Pelvis
+    400350: Pelvis 1
+    400352: Pelvis 2
+    400354: //RootNode
+    400356: Root
+    400358: Root 1
+    400360: Root 2
+    400362: Stomach
+    400364: Stomach 1
+    400366: Stomach 2
+    400368: Thigh.L
+    400370: Thigh.L 1
+    400372: Thigh.L 2
+    400374: Thigh.R.001
+    400376: Thigh.R.001 1
+    400378: Thigh.R.001 2
+    400380: Thumb.A.L
+    400382: Thumb.A.L 1
+    400384: Thumb.A.L 2
+    400386: Thumb.A.R.001
+    400388: Thumb.A.R.001 1
+    400390: Thumb.A.R.001 2
+    400392: Thumb.B.L
+    400394: Thumb.B.L 1
+    400396: Thumb.B.L 2
+    400398: Thumb.B.R.001
+    400400: Thumb.B.R.001 1
+    400402: Thumb.B.R.001 2
+    400404: Thumb.C.L
+    400406: Thumb.C.L 1
+    400408: Thumb.C.L 2
+    400410: Thumb.C.L_end
+    400412: Thumb.C.L_end 1
+    400414: Thumb.C.L_end 2
+    400416: Thumb.C.R.001
+    400418: Thumb.C.R.001 1
+    400420: Thumb.C.R.001 2
+    400422: Thumb.C.R.001_end
+    400424: Thumb.C.R.001_end 1
+    400426: Thumb.C.R.001_end 2
+    400428: Toes.L.002
+    400430: Toes.L.002 1
+    400432: Toes.L.002 2
+    400434: Toes.L.003
+    400436: Toes.L.003 1
+    400438: Toes.L.003 2
+    400440: Toes.L.003_end
+    400442: Toes.L.003_end 1
+    400444: Toes.L.003_end 2
+    400446: Toes.L.004
+    400448: Toes.L.004 1
+    400450: Toes.L.004 2
+    400452: Toes.L.005
+    400454: Toes.L.005 1
+    400456: Toes.L.005 2
+    400458: Toes.L.005_end
+    400460: Toes.L.005_end 1
+    400462: Toes.L.005_end 2
+    400464: Toes.L.006
+    400466: Toes.L.006 1
+    400468: Toes.L.006 2
+    400470: Toes.L.007
+    400472: Toes.L.007 1
+    400474: Toes.L.007 2
+    400476: Toes.L.007_end
+    400478: Toes.L.007_end 1
+    400480: Toes.L.007_end 2
+    400482: Toes.L.008
+    400484: Toes.L.008 1
+    400486: Toes.L.008 2
+    400488: Toes.L.009
+    400490: Toes.L.009 1
+    400492: Toes.L.009 2
+    400494: Toes.L.009_end
+    400496: Toes.L.009_end 1
+    400498: Toes.L.009_end 2
+    400500: Toes.L.010
+    400502: Toes.L.010 1
+    400504: Toes.L.010 2
+    400506: Toes.L.011
+    400508: Toes.L.011 1
+    400510: Toes.L.011 2
+    400512: Toes.L.011_end
+    400514: Toes.L.011_end 1
+    400516: Toes.L.011_end 2
+    400518: Toes.R.012
+    400520: Toes.R.012 1
+    400522: Toes.R.012 2
+    400524: Toes.R.013
+    400526: Toes.R.013 1
+    400528: Toes.R.013 2
+    400530: Toes.R.013_end
+    400532: Toes.R.013_end 1
+    400534: Toes.R.013_end 2
+    400536: Toes.R.014
+    400538: Toes.R.014 1
+    400540: Toes.R.014 2
+    400542: Toes.R.015
+    400544: Toes.R.015 1
+    400546: Toes.R.015 2
+    400548: Toes.R.015_end
+    400550: Toes.R.015_end 1
+    400552: Toes.R.015_end 2
+    400554: Toes.R.016
+    400556: Toes.R.016 1
+    400558: Toes.R.016 2
+    400560: Toes.R.017
+    400562: Toes.R.017 1
+    400564: Toes.R.017 2
+    400566: Toes.R.017_end
+    400568: Toes.R.017_end 1
+    400570: Toes.R.017_end 2
+    400572: Toes.R.018
+    400574: Toes.R.018 1
+    400576: Toes.R.018 2
+    400578: Toes.R.019
+    400580: Toes.R.019 1
+    400582: Toes.R.019 2
+    400584: Toes.R.019_end
+    400586: Toes.R.019_end 1
+    400588: Toes.R.019_end 2
+    400590: Toes.R.020
+    400592: Toes.R.020 1
+    400594: Toes.R.020 2
+    400596: Toes.R.021
+    400598: Toes.R.021 1
+    400600: Toes.R.021 2
+    400602: Toes.R.021_end
+    400604: Toes.R.021_end 1
+    400606: Toes.R.021_end 2
+    400608: UpperArm.L
+    400610: UpperArm.L 1
+    400612: UpperArm.L 2
+    400614: UpperArm.R.001
+    400616: UpperArm.R.001 1
+    400618: UpperArm.R.001 2
+    2100000: Material.064
+    2100002: Material.065
+    2100004: Material.066
+    2100006: Material.063
+    2100008: Material.033
+    2100010: Material.035
+    2100012: Material.034
+    2100014: Material.011
+    2100016: Material.026
+    2100018: Material.027
+    2100020: Material.028
+    2100022: Material.031
+    2100024: Material.032
+    2100026: Material.030
+    2100028: Material.029
+    2100030: Material.023
+    2100032: Material.022
+    2100034: Material.024
+    2100036: Material.001
+    2100038: Material.009
+    2100040: Material.036
+    2100042: Material.003
+    2100044: Material
+    2100046: Material.002
+    2100048: Material.037
+    2100050: Material.040
+    2100052: Material.049
+    2100054: Material.048
+    2100056: Material.041
+    2100058: Material.050
+    2100060: Material.043
+    2100062: Material.054
+    2300000: Cube
+    2300002: Cube.001
+    2300004: Cylinder
+    2300006: Cylinder.000
+    2300008: Cylinder.002
+    2300010: Cylinder.003
+    2300012: Cylinder.004
+    2300014: Cylinder.005
+    2300016: Cylinder.006
+    2300018: Cylinder.008
+    2300020: Cylinder.016
+    2300022: golf
+    3300000: Cube
+    3300002: Cube.001
+    3300004: Cylinder
+    3300006: Cylinder.000
+    3300008: Cylinder.002
+    3300010: Cylinder.003
+    3300012: Cylinder.004
+    3300014: Cylinder.005
+    3300016: Cylinder.006
+    3300018: Cylinder.008
+    3300020: Cylinder.016
+    3300022: golf
+    4300000: Cube.001
+    4300002: Cube
+    4300004: Cylinder.016
+    4300006: Cylinder.006
+    4300008: Cylinder.005
+    4300010: Cylinder.004
+    4300012: Cylinder.003
+    4300014: Cylinder
+    4300016: golf
+    4300018: Cylinder.000
+    4300020: Cylinder.002
+    4300022: Cylinder.008
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
