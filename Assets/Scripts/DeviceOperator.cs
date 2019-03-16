@@ -12,7 +12,7 @@ public class DeviceOperator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("Fire3")) //Respond to the input button defined in unity's input settings
+		if (Input.GetButtonDown("Fire2")) //Respond to the input button defined in unity's input settings
         {
             Collider[] hitColliders =
                 Physics.OverlapSphere(transform.position, radius); // OverlapSphere() returns a list of nearby objects

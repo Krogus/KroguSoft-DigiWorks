@@ -22,6 +22,34 @@ public class DoorOpenDevice : MonoBehaviour {
 
     }
 
+    public void Activate()
+    {
+        if (!_open)
+        {
+            Vector3 pos = transform.position + dPos;
+            transform.position = pos;
+            _open = true;
+        }
+    }
+
+    public void Deactivate()
+    {
+        if (_open)
+        {
+            Vector3 pos = transform.position - dPos;
+            transform.position = pos;
+            _open = false;
+        }
+    }
+
+
+
+
+
+
+
+
+
 
 
     //offset is 0, -2.9, 0 but I dunno where to put that :/

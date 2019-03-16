@@ -19,6 +19,8 @@ public class RelativeMovement : MonoBehaviour {
     private CharacterController _charController;
     private Animator _animator;
 
+    public float pushForce = 3.0f;
+
     //all the variables above are working so if you fuck up it's below this 
     public bool Sprint = false;
 
@@ -54,17 +56,19 @@ public class RelativeMovement : MonoBehaviour {
         
         if ( Sprint == true)
         {
+            pushForce = 5.0f;
             moveSpeed = 12.0f;
             _animator.SetBool("Sprint", true);
         }
 
         if (Sprint == false)
         {
+            pushForce = 3.0f;
             moveSpeed = 6.0f;
             _animator.SetBool("Sprint", false);
         }
 
-
+        
 
 
         //if (_charController.isGrounded) this has been changed to not use the character controller and instead use raycasting
@@ -163,5 +167,12 @@ public class RelativeMovement : MonoBehaviour {
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
         _contact = hit;
+
+        Rigidbody body = hit.collider.attachedRigidbody;
+        if (body != null && !body.isKinematic)
+        {
+            body.velocity = hit.moveDirection * pushForce;
+        }
+
     }
 }
