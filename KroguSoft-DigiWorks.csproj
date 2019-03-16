@@ -232,6 +232,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ReactiveTarget.cs" />
     <Compile Include="Assets\Scripts\ColourChangeDevice.cs" />
     <Compile Include="Assets\Scripts\DeviceOperator.cs" />
     <Compile Include="Assets\Scripts\DeviceTrigger.cs" />
