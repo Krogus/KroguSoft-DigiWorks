@@ -14,7 +14,7 @@ public class OrbitCamera : MonoBehaviour {
     public float minimumVert = -45.0f; //these two floats will be used to stop the camera from going too high/low
     public float maximumVert = 45.0f;
 
-
+    public bool gunner = false;
 
 
 	// Use this for initialization
@@ -29,54 +29,47 @@ public class OrbitCamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-       
-        _rotY += Input.GetAxis("Mouse X") * rotSpeed * 3;
 
-        _rotX += Input.GetAxis("Mouse Y") * rotSpeed * 3;
+        if (Input.GetKeyDown(KeyCode.Mouse1))
 
-        _rotX = Mathf.Clamp(_rotX, minimumVert, maximumVert);
+        {
+            gunner = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            gunner = false;
+        }
 
 
 
 
 
-        //Quaternion xrotation = Quaternion.Euler(0, 0, _rotX);
-       // transform.position = target.position - (xrotation * _offset);
+        if (gunner == false)
+        {
 
-        Quaternion rotation = Quaternion.Euler(-_rotX, _rotY, 0);
-        transform.position = target.position - (rotation * _offset);
-        transform.LookAt(target);
+            _rotY += Input.GetAxis("Mouse X") * rotSpeed * 3;
+
+            _rotX += Input.GetAxis("Mouse Y") * rotSpeed * 3;
+
+            _rotX = Mathf.Clamp(_rotX, minimumVert, maximumVert);
+
+            Quaternion rotation = Quaternion.Euler(-_rotX, _rotY, 0);
+            transform.position = target.position - (rotation * _offset);
+            transform.LookAt(target);
+
+        }
+
+
+
+
+
+
 
 	}
 
 
-
-
-    //void LateUpdate()
-    //{
-    //    float horInput = Input.GetAxis("Horizontal");
-    //    if (horInput != 0)
-    //    {
-    //        _rotY += horInput * rotSpeed;
-    //
-    //    }
-    //    else
-    //    {
-    //        _rotY += Input.GetAxis("Mouse X") * rotSpeed * 3;
-//
-   //     }
-   //     Quaternion rotation = Quaternion.Euler(0, _rotY, 0);
-   //     transform.position = target.position - (rotation * _offset);
-   //     transform.LookAt(target);
-
-    //}
-
-
-
-
-
-
-
+    
 
 
 
