@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof (CharacterController))]
 public class RelativeMovement : MonoBehaviour {
     [SerializeField] private Transform target;
-    [SerializeField] private Transform shoulderCam;
-    [SerializeField] private Transform mainCam;
 
     public float moveSpeed = 6.0f;
     public float rotSpeed = 15.0f;
@@ -37,20 +35,6 @@ public class RelativeMovement : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            target = shoulderCam;
-            // set main cam to inactive
-            mainCam.gameObject.SetActive(false);
-            shoulderCam.gameObject.SetActive(true);
-        }
-        if (Input.GetKeyUp(KeyCode.Mouse1))
-        {
-            target = mainCam;
-            // set shoulder cam to inactive
-            shoulderCam.gameObject.SetActive(false);
-            mainCam.gameObject.SetActive(true);
-        }
         Vector3 movement = Vector3.zero;
         float horInput = Input.GetAxis("Horizontal");
         float vertInput = Input.GetAxis("Vertical");
