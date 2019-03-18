@@ -36,22 +36,8 @@ public class RayShooter : MonoBehaviour
                 GameObject hitObject = hit.transform.gameObject;
                 ReactiveTarget target = hitObject.GetComponent<ReactiveTarget>();
                 if (target != null)
-                {
                     target.ReactToHit();
-                }
             }
-            else
-            {
-                StartCoroutine(SphereIndicator(hit.point));
-            }
-            
         }
-    }
-    private IEnumerator SphereIndicator(Vector3 pos)
-    {
-        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        sphere.transform.position = pos;
-        yield return new WaitForSeconds(2);
-        Destroy(sphere);
     }
 }
