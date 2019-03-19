@@ -286,7 +286,6 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
     <Compile Include="Assets\ReactiveTarget.cs" />
-    <Compile Include="Assets\Scripts\CameraTransition.cs" />
     <Compile Include="Assets\Scripts\ColourChangeDevice.cs" />
     <Compile Include="Assets\Scripts\DeviceOperator.cs" />
     <Compile Include="Assets\Scripts\DeviceTrigger.cs" />
