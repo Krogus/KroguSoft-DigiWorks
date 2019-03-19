@@ -26,7 +26,7 @@ public class RayShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Input.GetMouseButtonDown(1))
         {
             Vector3 point = new Vector3(_camera.pixelWidth / 2, ((2 * _camera.pixelHeight) / 3), 0);
             Ray ray = _camera.ScreenPointToRay(point);
