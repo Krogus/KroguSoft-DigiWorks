@@ -21,9 +21,18 @@ public class OrbitCamera : MonoBehaviour {
     //private float gunY;
     private Vector3 gunX;
     private Vector3 gunY;
+    //private Vector3 TP;
+    
 
 	// Use this for initialization
 	void Start () {
+        gunX[0] = 0.5f; //x
+        gunX[1] = 0.8f; //y
+        gunX[2] = - 1.0f; //z
+
+        gunY[0] = 0.0f;
+        gunY[1] = 0.0f;
+        gunY[2] = 0.0f;
 
 
         _rotX = transform.eulerAngles.x; 
@@ -48,15 +57,13 @@ public class OrbitCamera : MonoBehaviour {
 
         if (gunner == true)
         {
-            transform.position = target.position;
-
-            // transform.position
-            //transform.position + 5;
+            //transform.position = target.position + (gunX + gunY);
+            transform.position = target.position + (gunX);
 
 
 
 
-            //transform.position = target.position - (gunX, gunY);
+
 
 
         }
