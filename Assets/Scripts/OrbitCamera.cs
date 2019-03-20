@@ -16,6 +16,11 @@ public class OrbitCamera : MonoBehaviour {
 
     public bool gunner = false;
 
+    // this shit below is for the gunner mode x and y
+    //private float gunX;
+    //private float gunY;
+    private Vector3 gunX;
+    private Vector3 gunY;
 
 	// Use this for initialization
 	void Start () {
@@ -41,7 +46,20 @@ public class OrbitCamera : MonoBehaviour {
             gunner = false;
         }
 
+        if (gunner == true)
+        {
+            transform.position = target.position;
 
+            // transform.position
+            //transform.position + 5;
+
+
+
+
+            //transform.position = target.position - (gunX, gunY);
+
+
+        }
 
 
 
