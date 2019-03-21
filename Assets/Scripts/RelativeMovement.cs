@@ -24,6 +24,8 @@ public class RelativeMovement : MonoBehaviour {
     //all the variables above are working so if you fuck up it's below this 
     public bool Sprint = false;
 
+    public bool gunner = false;
+
     private void Start()
     {
         _vertSpeed = minFall;
@@ -68,88 +70,112 @@ public class RelativeMovement : MonoBehaviour {
             _animator.SetBool("Sprint", false);
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+
+        {
+            gunner = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            gunner = false;
+        }
 
 
         //if (_charController.isGrounded) this has been changed to not use the character controller and instead use raycasting
-   
-       // movement.y = _vertSpeed;
-        //movement *= Time.deltaTime;
-       // _charController.Move(movement);
 
-        
+        // movement.y = _vertSpeed;
+        //movement *= Time.deltaTime;
+        // _charController.Move(movement);
+        if (gunner == true)
+        {
+
+            float deltaX = Input.GetAxis("Horizontal") * moveSpeed;
+            float deltaZ = Input.GetAxis("Vertical") * moveSpeed;
+            Vector3 movement = new Vector3(deltaX, 0, deltaZ); //problem is right here nick if you get to this before I do
+            movement = Vector3.ClampMagnitude(movement, moveSpeed);
+
+            movement.y = gravity;
+
+            movement *= Time.deltaTime;
+            movement = transform.TransformDirection(movement);
+            _charController.Move(movement);
+        }
+
 
 
         //this's movin round
-        
-        if (horInput !=0 || vertInput !=0)
+        if (gunner == false)
         {
-            movement.x = horInput * moveSpeed;
-            movement.z = vertInput * moveSpeed;
-            movement = Vector3.ClampMagnitude(movement, moveSpeed);
-
-            Quaternion tmp = target.rotation;
-            target.eulerAngles = new Vector3(0, target.eulerAngles.y, 0);
-            movement = target.TransformDirection(movement);
-            target.rotation = tmp;
-
-            Quaternion direction = Quaternion.LookRotation(movement);
-            transform.rotation = Quaternion.Lerp(transform.rotation, direction, rotSpeed * Time.deltaTime);
-
-        }
-        _animator.SetFloat("Speed", movement.sqrMagnitude); //if I did this right, it'll change the SPEED in which the animator will change from idle to run!
-
-        bool hitGround = false;
-        RaycastHit hit;
-        if (_vertSpeed < 0 && Physics.Raycast(transform.position, Vector3.down, out hit))
-        {
-            float check = (_charController.height + _charController.radius) / 1.9f;
-            hitGround = hit.distance <= check;
-        }
-
-
-        if (hitGround){
-            if (Input.GetButtonDown("Jump"))
+            if (horInput != 0 || vertInput != 0)
             {
-                _vertSpeed = jumpSpeed;
-            }
-            else
-            {
-                _vertSpeed = minFall; 
-                _animator.SetBool("Jumping", false); //this is what's changing the bool for the animator!
-            }
-        }
-        else
-        {
-            _vertSpeed += gravity * 5 * Time.deltaTime;
-            if (_vertSpeed < terminalVelocity)
-            {
-                _vertSpeed = terminalVelocity;
+                movement.x = horInput * moveSpeed;
+                movement.z = vertInput * moveSpeed;
+                movement = Vector3.ClampMagnitude(movement, moveSpeed);
+
+                Quaternion tmp = target.rotation;
+                target.eulerAngles = new Vector3(0, target.eulerAngles.y, 0);
+                movement = target.TransformDirection(movement);
+                target.rotation = tmp;
+
+                Quaternion direction = Quaternion.LookRotation(movement);
+                transform.rotation = Quaternion.Lerp(transform.rotation, direction, rotSpeed * Time.deltaTime);
 
             }
+            _animator.SetFloat("Speed", movement.sqrMagnitude); //if I did this right, it'll change the SPEED in which the animator will change from idle to run!
 
-            if (_contact != null)
+            bool hitGround = false;
+            RaycastHit hit;
+            if (_vertSpeed < 0 && Physics.Raycast(transform.position, Vector3.down, out hit))
             {
-                _animator.SetBool("Jumping", true);
+                float check = (_charController.height + _charController.radius) / 1.9f;
+                hitGround = hit.distance <= check;
             }
 
 
-
-            if (_charController.isGrounded)
+            if (hitGround)
             {
-                if (Vector3.Dot(movement, _contact.normal) < 0)
+                if (Input.GetButtonDown("Jump"))
                 {
-                    movement = _contact.normal * moveSpeed;
+                    _vertSpeed = jumpSpeed;
                 }
                 else
                 {
-                    movement += _contact.normal * moveSpeed;
+                    _vertSpeed = minFall;
+                    _animator.SetBool("Jumping", false); //this is what's changing the bool for the animator!
                 }
-                
             }
-            
-        }
+            else
+            {
+                _vertSpeed += gravity * 5 * Time.deltaTime;
+                if (_vertSpeed < terminalVelocity)
+                {
+                    _vertSpeed = terminalVelocity;
 
+                }
+
+                if (_contact != null)
+                {
+                    _animator.SetBool("Jumping", true);
+                }
+
+
+
+                if (_charController.isGrounded)
+                {
+                    if (Vector3.Dot(movement, _contact.normal) < 0)
+                    {
+                        movement = _contact.normal * moveSpeed;
+                    }
+                    else
+                    {
+                        movement += _contact.normal * moveSpeed;
+                    }
+
+                }
+
+            }
+        }
 
 
         movement.y = _vertSpeed;
