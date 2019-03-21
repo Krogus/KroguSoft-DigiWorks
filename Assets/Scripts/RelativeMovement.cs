@@ -84,7 +84,7 @@ public class RelativeMovement : MonoBehaviour {
 
         //if (_charController.isGrounded) this has been changed to not use the character controller and instead use raycasting
 
-        // movement.y = _vertSpeed;
+        //movement.y = _vertSpeed;
         //movement *= Time.deltaTime;
         // _charController.Move(movement);
         if (gunner == true)
@@ -92,14 +92,15 @@ public class RelativeMovement : MonoBehaviour {
 
             float deltaX = Input.GetAxis("Horizontal") * moveSpeed;
             float deltaZ = Input.GetAxis("Vertical") * moveSpeed;
-            Vector3 movement = new Vector3(deltaX, 0, deltaZ); //problem is right here nick if you get to this before I do
-            movement = Vector3.ClampMagnitude(movement, moveSpeed);
+
+            Vector3 movementGun = new Vector3(deltaX, 0, deltaZ); //fixed it by changing the name to movementGun as movement is already under Update ()
+            movementGun = Vector3.ClampMagnitude(movementGun, moveSpeed);
 
             movement.y = gravity;
 
-            movement *= Time.deltaTime;
-            movement = transform.TransformDirection(movement);
-            _charController.Move(movement);
+            movementGun *= Time.deltaTime;
+            movementGun = transform.TransformDirection(movementGun);
+            _charController.Move(movementGun);
         }
 
 
