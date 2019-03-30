@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[AddComponentMenu("Control Script/Mouse Look")]
 public class OrbitCamera : MonoBehaviour {
     [SerializeField] private Transform target;
 
@@ -23,6 +24,22 @@ public class OrbitCamera : MonoBehaviour {
     private Vector3 gunY;
     //private Vector3 TP;
     
+        // Everything contained within here is for the gunner movement
+    public enum RotationAxes
+    {
+        MouseXandY = 0,
+        MouseX = 1,
+        MouseY = 2
+    }
+
+    public RotationAxes axes = RotationAxes.MouseXandY;
+
+    public float sensitivityHor = 9.0f;
+    public float sensitivityVert = 9.0f;
+
+    private float _rotationX = 0;
+
+        //imagine this is kinda like a bottom bracket lol
 
 	// Use this for initialization
 	void Start () {
@@ -60,7 +77,24 @@ public class OrbitCamera : MonoBehaviour {
             //transform.position = target.position + (gunX + gunY);
             transform.position = target.position + (gunX);
 
+            if (axes == RotationAxes.MouseX)
+            {
+                transform.Rotate(0, Input.GetAxis("Mouse Y") * sensitivityHor, 0);
+            }
+            else if (axes == RotationAxes.MouseY)
+            {
+                _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+                _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
+            }
+            else
+            {
+                float rotationY = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityHor;
 
+                _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+                _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
+
+                transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
+            }
 
 
 
