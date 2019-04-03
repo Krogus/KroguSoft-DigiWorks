@@ -96,15 +96,33 @@ public class OrbitCamera : MonoBehaviour {
 
             //_rotX = Mathf.Clamp(_rotX, minimumVert, maximumVert);
 
-            // Quaternion rotation = Quaternion.Euler(-_rotX, _rotY, 0);
-
             if (axes == RotationAxes.MouseX)
             {
                 transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
             }
+            else if (axes == RotationAxes.MouseY)
+            {
+                _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+                _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
+
+                transform.localEulerAngles = new Vector3(_rotationX, transform.localEulerAngles.y, 0);
+            }
+            else
+            {
+                float rotationY = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityHor;
+
+                _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+                _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
+
+                transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
+            }
+
+            // Quaternion rotation = Quaternion.Euler(-_rotX, _rotY, 0);
 
 
-            _testroty= target.localEulerAngles.y+180;
+
+
+            _testroty = target.localEulerAngles.y+180;
 
             Quaternion rotation = Quaternion.Euler(0, _testroty, 0);
             Vector3 newtarget;

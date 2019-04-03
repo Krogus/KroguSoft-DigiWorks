@@ -16,6 +16,15 @@ public class RelativeMovement : MonoBehaviour {
     }
     public float sensitivityHor = 9.0f;
     public RotationAxes axes = RotationAxes.MouseXandY;
+    // if broken look here
+    
+    public float sensitivityVert = 9.0f;
+
+    public float minimumVert = -45.0f;
+    public float maximumVert = 45.0f;
+
+    private float _rotationX = 0;
+    //
     // yuh
     public float moveSpeed = 6.0f;
     public float rotSpeed = 15.0f;
@@ -100,10 +109,28 @@ public class RelativeMovement : MonoBehaviour {
         // _charController.Move(movement);
         if (gunner == true)
         {
+            // okay inside of this is testing for rotating the character because the camera will follow the character in gunner mode
             if (axes == RotationAxes.MouseX)
             {
                 transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
             }
+            else if (axes == RotationAxes.MouseY)
+            {
+               // _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+                //_rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
+
+                //transform.localEulerAngles = new Vector3(_rotationX, transform.localEulerAngles.y, 0);
+            }
+            else
+            {
+                float rotationY = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityHor;
+
+               // _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+               // _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
+
+                transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
+            }
+            // h
 
             float deltaX = Input.GetAxis("Horizontal") * moveSpeed;
             float deltaZ = Input.GetAxis("Vertical") * moveSpeed;
@@ -116,6 +143,71 @@ public class RelativeMovement : MonoBehaviour {
             movementGun *= Time.deltaTime;
             movementGun = transform.TransformDirection(movementGun);
             _charController.Move(movementGun);
+
+            // testing in here
+
+
+          /*  bool hitGround = false;
+            if (hitGround)
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                    _vertSpeed = jumpSpeed;
+                }
+                else
+                {
+                    _vertSpeed = minFall;
+                    _animator.SetBool("Jumping", false); //this is what's changing the bool for the animator!
+                }
+            }
+            else
+            {
+                _vertSpeed += gravity * 5 * Time.deltaTime;
+                if (_vertSpeed < terminalVelocity)
+                {
+                    _vertSpeed = terminalVelocity;
+
+                }
+
+                if (_contact != null)
+                {
+                    _animator.SetBool("Jumping", true);
+                }
+
+
+
+                if (_charController.isGrounded)
+                {
+                    if (Vector3.Dot(movement, _contact.normal) < 0)
+                    {
+                        movement = _contact.normal * moveSpeed;
+                    }
+                    else
+                    {
+                        movement += _contact.normal * moveSpeed;
+                    }
+
+                }
+
+            }
+
+    */
+
+            //Jumping SEEMS to be working
+            _animator.SetFloat("Speed", movement.sqrMagnitude);
+            RaycastHit hit;
+            if (_vertSpeed < 0 && Physics.Raycast(transform.position, Vector3.down, out hit))
+            {
+                float check = (_charController.height + _charController.radius) / 1.9f;
+               // hitGround = hit.distance <= check;
+            }
+
+           
+
+
+
+
+            // testing in here
         }
 
 
