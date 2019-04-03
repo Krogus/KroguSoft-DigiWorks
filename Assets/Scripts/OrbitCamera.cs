@@ -41,12 +41,16 @@ public class OrbitCamera : MonoBehaviour {
 
     public float _testroty =0;
 
+    
+
+
+
         //imagine this is kinda like a bottom bracket lol
 
 	// Use this for initialization
 	void Start () {
         gunX[0] = 0.5f; //x
-        gunX[1] = -1.0f; //y
+        gunX[1] = -0.5f; //y
         gunX[2] = - 1.0f; //z
 
        // gunY[0] = 0.0f;
@@ -94,14 +98,21 @@ public class OrbitCamera : MonoBehaviour {
 
             // Quaternion rotation = Quaternion.Euler(-_rotX, _rotY, 0);
 
+            if (axes == RotationAxes.MouseX)
+            {
+                transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
+            }
+
+
             _testroty= target.localEulerAngles.y+180;
 
             Quaternion rotation = Quaternion.Euler(0, _testroty, 0);
             Vector3 newtarget;
             newtarget = target.position - (rotation * _testoffset);
-            
 
-           // newtarget.position = newtarget.position;// - (rotation * _testoffset);
+           
+
+            // newtarget.position = newtarget.position;// - (rotation * _testoffset);
 
             //transform.position = target.position;// - (rotation * _offset);
 

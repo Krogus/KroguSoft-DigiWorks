@@ -6,6 +6,17 @@ using UnityEngine;
 public class RelativeMovement : MonoBehaviour {
     [SerializeField] private Transform target;
 
+    // testing stuff for rotating character in gunner with the mouse
+
+    public enum RotationAxes
+    {
+        MouseXandY = 0,
+        MouseX = 1,
+        MouseY = 2
+    }
+    public float sensitivityHor = 9.0f;
+    public RotationAxes axes = RotationAxes.MouseXandY;
+    // yuh
     public float moveSpeed = 6.0f;
     public float rotSpeed = 15.0f;
     public float jumpSpeed = 15.0f;
@@ -89,6 +100,10 @@ public class RelativeMovement : MonoBehaviour {
         // _charController.Move(movement);
         if (gunner == true)
         {
+            if (axes == RotationAxes.MouseX)
+            {
+                transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
+            }
 
             float deltaX = Input.GetAxis("Horizontal") * moveSpeed;
             float deltaZ = Input.GetAxis("Vertical") * moveSpeed;
