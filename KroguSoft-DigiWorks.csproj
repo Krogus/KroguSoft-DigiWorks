@@ -312,13 +312,14 @@
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
-    <Compile Include="Assets\ReactiveTarget.cs" />
     <Compile Include="Assets\Scripts\ColourChangeDevice.cs" />
     <Compile Include="Assets\Scripts\DeviceOperator.cs" />
     <Compile Include="Assets\Scripts\DeviceTrigger.cs" />
     <Compile Include="Assets\Scripts\DoorOpenDevice.cs" />
+    <Compile Include="Assets\Scripts\joey files\RayShooter.cs" />
+    <Compile Include="Assets\Scripts\joey files\ReactiveTarget.cs" />
+    <Compile Include="Assets\Scripts\joey files\WanderingAI.cs" />
     <Compile Include="Assets\Scripts\OrbitCamera.cs" />
-    <Compile Include="Assets\Scripts\RayShooter.cs" />
     <Compile Include="Assets\Scripts\RelativeMovement.cs" />
   </ItemGroup>
   <ItemGroup>
